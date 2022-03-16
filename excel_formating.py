@@ -21,7 +21,7 @@ def format_excel():
     #add colors in columns
     for col in range (4, ws.max_column+1):
         for cel in range (1, len(ws['A']) + 1):        
-            if get_column_letter(col) in ['D','E','F','G','H','I','AB','AC','AD','AE','P','Q','R']:
+            if get_column_letter(col) in ['D','E','F','G','H','I','O','P','Q','R''AB','AC','AD','AE']:
                 ws[get_column_letter(col) + str(cel)].fill = filling
             else:
                 ws[get_column_letter(col) + str(cel)].fill = filling2
