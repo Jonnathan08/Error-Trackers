@@ -44,5 +44,4 @@ def format_excel():
 
     wb.save('error_report_%s.xlsx' % today)
 
-format_excel()
-#get_column_letter(col) in ['C','D','E','F','G','H','I','Q','R','S','T','U','V','W']
+#format_excel()
