@@ -1,5 +1,5 @@
 from openpyxl import Workbook, load_workbook
-from openpyxl.styles import colors , fills, Font
+from openpyxl.styles import colors , fills, Font, Alignment
 from openpyxl.utils import get_column_letter
 from datetime import datetime
 
@@ -21,7 +21,9 @@ def format_excel():
 
     #add colors in columns
     for col in range (1, ws.max_column+1):
-        for cel in range (1, len(ws['A']) + 1):        
+        for cel in range (1, len(ws['A']) + 1):
+            ws[get_column_letter(col) + str(cel)].alignment = Alignment(wrap_text=True) 
+            ws.row_dimensions[cel].height = 14.4       
             if col % 2 != 0:
                 ws[get_column_letter(col) + str(cel)].fill = filling
             else:
